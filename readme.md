@@ -30,39 +30,32 @@ Yash's Server is a simple full-stack application where users can add themselves 
 
 Backend
 
-````bash
-    cd backend/
-    ```
-````
+```bash
+cd backend/
+```
 
-````bash
-    npm install
-    ```
-````
+```bash
+npm install
+```
 
-````bash
-    npm run devstart
-    ```
-````
+```bash
+npm run devstart
+```
 
 Frontend
 
-````bash
-    cd frontend/
-    ```
-````
+```bash
+cd frontend/
+```
 
-````bash
-    npm install
-    ```
-````
+```bash
+npm install
+```
 
-````bash
-    npm run dev
-    ```
-````
+```bash
+npm run dev
+```
 
-````bash
-    npm run tailwindWatch
-    ```
-````
+```bash
+npm run tailwindWatch
+```

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const zod = require("zod");
@@ -8,7 +10,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/full-stack-card");
+mongoose
+    .connect(process.env.MONGO_URL)
+    .then((e) => console.log("MongoDB Connected"));
 
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -93,12 +97,3 @@ app.get("/api/all-users", async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`App is running at ${PORT}`));
-
-// {
-//     "name": "yash pandey",
-//     "intro": "Budding Full Stack Developer | Focusing on Web Dev, Cloud Computing & UI Design | Open source💚 | Find me in front of my💻 or with ⚽ on the ground.",
-//     "github": "https://github.com/yashpandey002",
-//     "twitter": "https://twitter.com/pandeyyash_",
-//     "linkedin": "https://www.linkedin.com/in/pandeyyash/",
-//     "interests": ["Javascript", "MERN", "UI design"]
-// }

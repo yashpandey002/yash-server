@@ -22,7 +22,7 @@ Yash's Server is a simple full-stack application where users can add themselves 
     -   React: A JavaScript library for building user interfaces.
     -   Tailwind CSS: A utility-first CSS framework for rapid UI development.
 
-## Setup Instructions
+## Want to Contribute?
 
 1. Clone the repository.
 2. Navigate to the project directory.
@@ -59,3 +59,11 @@ npm run dev
 ```bash
 npm run tailwindWatch
 ```
+
+Open the Backend Port(3000 most probably) and the app will be serving here.
+
+For Backend Contribution
+- Update the code in Backend folder and the output will be shown in the devstart terminal.
+
+For Frontend Contribution
+- Update the relevant React code, run the build command and move the resulting dist/ folder to the backend folder.

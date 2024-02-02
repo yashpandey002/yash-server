@@ -4,23 +4,22 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const zod = require("zod");
 const mongoose = require("mongoose");
-const cors = require("cors");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://glittering-rugelach-f0a608.netlify.app",
     optionsSuccessStatus: 200,
 };
+
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 mongoose
     .connect(process.env.MONGO_URL)
-    .then(() => console.log("MongoDB Connected"))
-    .catch((error) => console.error("MongoDB connection error:", error));
+    .then((e) => console.log("MongoDB Connected"));
 
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true },

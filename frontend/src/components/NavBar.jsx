@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavBar({ linkTitle, linkRoute }) {
     return (
-        <div className="max-w-2xl px-5 pt-3 mx-auto">
+        <div className="max-w-2xl px-5 py-3 mx-auto">
             <ul className="flex justify-between">
                 <li>
                     <Link
